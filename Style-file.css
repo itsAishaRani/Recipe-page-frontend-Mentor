@@ -72,10 +72,10 @@ h3 {
 }
 
 strong {
-  color: var(--almost-black);
+  color: var(--text-color);
 }
 hr {
-  color: 1px solid #ccc;
+  color: var(--text-color);
 }
 
 /* =======================
@@ -103,7 +103,7 @@ hr {
 
 .intro {
   width: 100%;
-  margin: 1rem 0;
+  margin: 0.7rem 0;
   padding: 1rem;
   line-height: 1.5rem;
 }
@@ -122,7 +122,7 @@ hr {
   line-height: 2rem;
 }
 
-.preparation-time li::marker {
+.preparation-time-list li::marker {
   color: var(--dark-pink);
 }
 
@@ -155,9 +155,11 @@ hr {
 .instructions-list {
   list-style-position: inside;
   margin: 1rem 0;
-  line-height: 2.5rem;
+  margin-bottom: 1rem;
 }
-
+.instructions-list li {
+  margin-bottom: 0.5rem;
+}
 .instructions-list li::marker {
   color: var(--deep-brown);
   font-weight: bolder;
@@ -196,4 +198,152 @@ hr {
 .td-value {
   color: var(--deep-brown);
   font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    margin: 3rem auto;
+    padding: 1rem 1.5rem;
+  }
+
+  img {
+    padding: 1.5rem;
+    border-radius: 25px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .ingredients-list li,
+  .instructions-list li,
+  .preparation-time-list li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* =======================
+   Responsive Design
+======================= */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    margin: 3rem auto;
+    padding: 1rem 1.5rem;
+  }
+
+  img {
+    padding: 1.5rem;
+    border-radius: 25px;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .ingredients-list li,
+  .instructions-list li,
+  .preparation-time-list li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .container {
+    margin: 4rem auto;
+    padding: 1.5rem 2rem;
+  }
+
+  img {
+    padding: 2rem;
+    border-radius: 35px;
+  }
+
+  .intro {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.9rem;
+  }
+
+  .ingredients-list li,
+  .instructions-list li,
+  .preparation-time-list li {
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    padding: 3rem;
+  }
+
+  .container {
+    max-width: 850px;
+    margin: 4rem auto;
+    padding: 2rem 3rem;
+  }
+
+  img {
+    padding: 0;
+    border-radius: 1.5rem;
+  }
+
+  .intro {
+    font-size: 1.05rem;
+    line-height: 1.7rem;
+  }
+
+  .ingredients-list li,
+  .instructions-list li,
+  .preparation-time-list li {
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    padding: 4rem 0;
+  }
+
+  .container {
+    max-width: 900px;
+    padding: 3rem;
+  }
+
+  .ingredients-list li,
+  .instructions-list li,
+  .preparation-time-list li {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 950px;
+  }
 }
